@@ -1,13 +1,16 @@
 #include<stdio.h>
 #include<unistd.h>
-#include<signal.h>
+#include<time.h>
 int main()
 {
 	int i;
-	for(i=0;i<10;i++)
+	struct timespec tim1,tim2;
+	tim1.tv_sec = 0;//0 seconds and
+	tim1.tv_nsec = 20*1000000L;// 20 micro sec delay is created
+	for(i=0;i<500;i++)
 	{
 		if(i%2==1)
 			fprintf(stderr,"%d ",i);
-		sleep(1);
+		nanosleep(&tim1,&tim1);
 	}
 }
