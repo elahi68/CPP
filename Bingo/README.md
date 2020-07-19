@@ -1,6 +1,9 @@
 when you hit ./a.out on your linux terminal it will display
-ex:
 Enter no of players:2
+
+//First you have to enter how many players
+//then, You will be displayed with a set of 
+//5x5 matrices which are random and 
 //then according to the no of players 
 //the set of matrixes are displayed! with randomness
 //in the range 1 - 25 in each set
@@ -43,6 +46,3 @@ player 2 wins
 | X   X   X   24  X    |
 | 9   X   X   X   X    |
 | X   X   X   X   X    |
-First you have to enter how many players
-then, You will be displayed with a set of 
-5x5 matrices which are random and 
