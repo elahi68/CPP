@@ -9,6 +9,15 @@ Integer :: Integer (string ptr)
 }
 
 /*------------------Unary Operators---------------*/
+Intger operator-()//uinary minus
+{
+	data = -data;
+	return *this;
+}
+Integer operator+()//uinary plus
+{
+	return *this;
+}
 //Increment and Decrement - operation on self object
 Integer Integer :: operator ++()
 {
@@ -40,7 +49,20 @@ Integer Integer :: operator ~()
 	Integer temp;
 	temp.data = ~data;
 	return temp;
-}	       
+}
+//Assignment operators
+Integer Integer :: operator =(Integer op2)
+{
+	data = op2.data;
+	return *this;
+}
+Integer Integer :: operator =(int op2)
+{
+	data = op2;
+	return *this;
+}
+//Compound assignment
+
 /*---------------Binary operators-------------------*/
 //ArithMetic Operrators - parameter is integer object
 Integer Integer :: operator +(Integer op2)
@@ -69,11 +91,6 @@ Integer Integer :: operator /(Integer op2)
 	temp.data = data / op2.data;
 	return temp;
 }
-Integer Integer :: operator =(Integer op2)
-{
-	data = op2.data;
-	return *this;
-}
 //Arithmetic Operators - parameter is int
 Integer Integer :: operator +(int op2)
 {
@@ -98,11 +115,6 @@ Integer Integer :: operator /(int op2)
 	Integer temp;
 	temp.data = data / op2;
 	return temp;
-}
-Integer Integer :: operator =(int op2)
-{
-	data = op2;
-	return *this;
 }
 //Relational Operators - return type bool Integer :: - parameter is Integer Integer :: object
 bool Integer :: operator <(Integer op2)
@@ -206,4 +218,57 @@ Integer Integer :: operator |(int op2)
 	Integer temp;
 	temp.data = data | op2;
 	return temp;
+}
+//Compound assingnment
+Integer Integer :: operator+=(Integer op1,int op2)
+{
+	op1.data+=op2;
+	return *this;	
+}
+Integer Integer :: operator-=(Integer op1,int op2)
+{
+	op1.data-=op2;
+	return *this;	
+}
+
+Integer Integer :: operator*=(Integer op1,int op2)
+{
+	op1.data*=op2;
+	return *this;	
+}	
+
+Integer Integer :: operator/=(Integer op1,int op2)
+{
+	op1.data/=op2;
+	return *this;	
+}	
+
+Integer Integer :: operator%=(Integer op1,int op2)
+{
+	op1.data%=op2;
+	return *this;	
+}
+
+Integer Integer :: operator^=(Integer op1,int op2)
+{
+	op1.data^=op2;
+	return *this;	
+}
+
+Integer Integer :: operator|=(Integer op1,int op2)
+{
+	op1.data|=op2;
+	return *this;	
+}
+
+Integer Integer :: operator<<=(Integer op1,int op2)
+{
+	op1.data<<=op2;
+	return *this;	
+}
+
+Integer Integer :: operator>>=(Integer op1,int op2)
+{
+	op1.data>>=op2;
+	return *this;	
 }

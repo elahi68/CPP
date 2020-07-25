@@ -19,11 +19,18 @@ Integer operator*(int op1,Integer op2)
 	return temp;
 
 }
-Integer operator/(int op1,Integer op2)
+Integer operator/(int op1,Integer op2)//change return type to int
 {
 	Integer temp;
 	temp.data = op1/op2.data;
 	return temp;
+}
+Integer operator%(Integer op1,int op2)
+{
+
+}	
+int operator%(int op1,Integer op2)
+{
 
 }
 //Relational operator - return type bool -   functions
@@ -86,4 +93,50 @@ ostream& operator << (ostream& os,Integer i)
 {
 	os<<i.data;
 	return os;
+}
+//Relational operators
+int operator+=(int op1,Integer op2)
+{
+	op1 += op2.data;
+	return op1;
+}
+int operator-=(int op1,Integer op2)
+{
+	op1 -= op2.data;
+	return op1;
+}
+int operator*=(int op1,Integer op2)
+{
+	op1 *= op2.data;
+	return op1;
+} 
+int operator/=(int op1,Integer op2)
+{
+	op1 /= op2.data;
+	return op1;
+}
+int operator%=(int op1,Integer op2)
+{
+	op1 %= op2.data;
+	return op1;
+}
+int operator^=(int op1,Integer op2)
+{
+	op1 ^= op2.data;
+	return op1;
+}	
+int operator|=(int op1,Integer op2)
+{
+	op1 |= op2.data;
+	return op1;
+}	
+int operator<<=(int op1,Integer op2)
+{
+	op1 <<= op2.data;
+	return op1;
+}	
+int operator>>=(int op1,Integer op2)
+{
+	op1 >>= op2.data;
+	return op1;
 }
