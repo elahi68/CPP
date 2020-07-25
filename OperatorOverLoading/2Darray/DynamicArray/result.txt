@@ -1,0 +1,55 @@
+//reurning a object call by value - not collecing it
+
+Default constructor invoked
+Enter no of rows: 
+Enter no of columns: 
+Default constructor invoked
+Enter no of rows: 
+Enter no of columns: 
+Default constructor invoked
+Enter no of rows: 
+Enter no of columns: 
++ invoked
+Default constructor invoked
+Enter no of rows: Enter no of columns: 
+= invoked
+Destructor invoked
+Destructor invoked
+Destructor invoked
+Destructor invoked
+//when not collecting no temporary objects are created and copy constructor is not
+//invoked
+
+
+//returnig object call by value from member function but collecting it
+
+Default constructor invoked
+Enter no of rows: 
+Enter no of columns: 
+Default constructor invoked
+Enter no of rows: 
+Enter no of columns: 
+Default constructor invoked
+Enter no of rows: 
+Enter no of columns: 
++ invoked
+Default constructor invoked
+Enter no of rows: Enter no of columns: 
+= invoked
+copy invoked
+Destructor invoked
+Destructor invoked
+Destructor invoked
+Destructor invoked
+Destructor invoked
+
+//copy constructor is called and a temporary object is also created
+//when a copy constructor is called
+
+int main()
+{
+	int row,col;
+	Matrix m1,m2,m3;
+	m2+m1//case 1
+	m3 = m2+m1;//case 2
+}
