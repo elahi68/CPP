@@ -2,7 +2,7 @@
 #include<vector>
 #include<algorithm>
 
-/* algorithm, vector, iostream */
+/* algorithm, vector, iostream and namespace std */
 using namespace std;
 int main()
 {
