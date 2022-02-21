@@ -2,6 +2,7 @@
 #include<vector>
 #include<algorithm>
 
+/* algorithm, vector, iostream */
 using namespace std;
 int main()
 {
